@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito';
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+.navbar {
+    z-index: 2;
+    grid-area: navbar;
+    height: 111px;
+    padding: 0 30px;
+    position: fixed;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "nav-logo nav-links";
+    align-items: center;
+    justify-items: center;
+    background-color: rgba(14, 14, 14, 0.142);
+
+}
+
+
+/* navbar */
+
+.nav-logo {
+    grid-area: nav-logo;
+
+    display: flex;
+    justify-content: left;
+    padding-left: 50px;
+    height: 100%;
+    width: 100%;
+}
+
+.logo {
+    width: 120px;
+    justify-self: center;
+    color: white;
+
+}
+
+.nav-links {
+    height: 100%;
+    width: 50%;
+    margin-left: 10rem;
+    list-style: none;
+    grid-area: nav-links;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+
+}
+
+
+.nav-links a {
+
+    text-decoration: none;
+    width: fit-content;
+    font-size: large;
+    color: rgba(255, 255, 255, 0.781);
+    font-size: 18px;
+    font-weight: 500;
+    transition-duration: 0.5s;
+    
+
+
+
+
+}
+
+/* home */
+.nav-links-dot-rel {
+    position: relative;
+    display: inline-block;
+    
+}
+
+
+ 
+.nav-links-dot-item::after {
+    
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+
+    width: 8px;
+    height: 8px;
+    background-color: rgb(227, 112, 247);
+    border-radius: 50%;
+}
+
+
+.nav-links a:hover {
+
+    color: rgb(119, 61, 128);
+}
+
+/* main */
+.main {
+    height: 100vh;
+    width: 100%;
+    grid-area: main;
+
+}
+
+
+
+.banner-text {
+    color: white;
+    font-size: 80px;
+    font-weight: 500;
+    font-family: nicotineregular;
+    letter-spacing: 2px;
+    height: 100px;
+    text-align: center;
+    padding: 10rem;
+}

@@ -1,0 +1,232 @@
+.nav-links a:nth-child(2) {
+    color: white;
+    font-weight: 600;
+}
+
+.nav-links a:nth-child(2):hover {
+    color: white;
+}
+
+body {
+    background-color: white;
+}
+
+
+
+.about-layout {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "navbar"
+        "main";
+
+
+}
+
+.navbar {
+    grid-area: navbar;
+
+}
+
+
+
+.main {
+    grid-area: main;
+    width: 100vw;
+    height: fit-content;
+
+
+}
+
+.main .inner-items {
+
+    width: 100vw;
+    height: fit-content;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+
+
+
+
+
+
+    .inner-item:nth-child(odd) {
+        background-color: black;
+
+    }
+
+    .inner-item:nth-child(1) {
+        background: url(../res/banner/banner.webp) no-repeat center/cover;
+        width: 100vw;
+        height: 100vh;
+        color: white;
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        grid-template-rows: 100vh;
+        grid-template-areas:
+            "banner-text";
+
+        .banner-text1 {
+            grid-area: banner-text;
+            color: white;
+            font-size: 55px;
+            font-weight: 500;
+            font-family: nicotineregular;
+            letter-spacing: 2px;
+            align-content: center;
+            padding: 18rem 5rem;
+        }
+
+    }
+
+    .inner-item:nth-child(2) {
+
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            padding: 5rem;
+            
+
+        }
+
+        .item {
+            height: 100%;
+            color: white;
+            display: grid;
+            grid-template-columns: 1fr;
+
+            justify-content: left;
+            align-items: center;
+            padding: 1rem;
+            
+
+
+        }
+
+
+        .i1 img {
+            width: 70%;
+            display: block;
+            margin: auto;
+
+        }
+
+        img {
+            width: 100%;
+        }
+
+
+        p {
+            color: rgb(63, 62, 62);
+
+            font-size: 23px;
+            font-weight: 500;
+        }
+
+        .item:nth-child(3) p {
+            margin: 40px 0;
+        }
+
+
+        ul {
+            list-style: none;
+
+        }
+
+        .lo {
+            font-size: 26px;
+            font-weight: 550;
+            color: rgb(65, 63, 63);
+            margin-right: 2rem;
+        }
+
+        .hour {
+            font-size: 22px;
+            font-weight: 600;
+            color: rgb(55, 55, 55);
+            margin-right: 5px;
+        }
+
+        .time {
+            font-size: 22px;
+            font-weight: 500;
+            color: rgb(84, 82, 82);
+            margin-right: 5px;
+        }
+
+        .loc-title {
+            font-size: 40px;
+            font-weight: 650;
+            color: rgb(51, 51, 51);
+            margin-bottom: 2rem;
+        }
+        .social-links {
+            height: 100%;
+            width: fit-content;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 30px;
+            padding: 30px 0;
+
+            img {
+                width: 50px;
+                height: 40px;
+                transition: 0.5s;
+            }
+
+            img:hover {
+                scale: 1.1;
+            }
+        }
+    }
+
+
+    .inner-item:nth-child(3) {
+    height: fit-content;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: linear-gradient(to right, rgb(193, 119, 222), rgb(235, 96, 96));
+
+}
+}
+
+
+
+/* 
+.about-layout .main{
+    grid-area: main;
+
+}
+
+.main .inner-items{
+    width: 100vw;
+    height: 100vh;
+}
+
+.main .inner-items .inner-item {
+    width: 100%;
+    height: 500px;
+}
+
+.main .inner-items .inner-item {
+    background: url(../res/banner/banner.webp) no-repeat center/cover;
+    width: 100%;
+    height: 100%;
+    color: white;
+    justify-items: center;
+    align-content: center;
+
+
+}
+ */

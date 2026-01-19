@@ -1,0 +1,162 @@
+.nav-links a:nth-child(3) {
+    color: white;
+    font-weight: 600;
+}
+
+.nav-links a:nth-child(3):hover {
+    color: white;
+}
+
+body {
+    background-color: white;
+}
+
+
+
+.menu-layout {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "navbar"
+        "main";
+
+
+}
+
+.navbar {
+    grid-area: navbar;
+
+}
+
+
+
+.main {
+    grid-area: main;
+    width: 100vw;
+    height: fit-content;
+
+
+}
+
+.main .inner-items {
+
+    width: 100vw;
+
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "banner"
+        "footer";
+
+
+
+
+
+
+
+    .inner-item:nth-child(1) {
+
+        grid-area: banner;
+        background: url(../res/banner/menubanner.webp) no-repeat center/cover;
+        width: 100vw;
+        height: 100vh;
+        color: white;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "menu-cards";
+
+        align-content: center;
+        justify-items: center;
+
+
+        .menu-cards {
+            grid-area: menu-cards;
+            justify-content: center;
+            align-items: center;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            width: fit-content;
+            
+
+            .menu-card {
+                width: 100%;
+                height: 100%;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr auto auto ;
+                grid-template-areas: 
+                "food-item"
+                "menu-text"
+                "add-icon";
+                
+                align-content: center;
+                justify-items: center;
+                row-gap: 10px;
+
+                .food-item{
+                    grid-area: food-item;
+                    /* border: 2px solid black; */
+                }
+                .menu-text{
+                    grid-area: menu-text;
+                    /* border: 2px solid black; */
+                }
+                .add-icon{
+                    grid-area: add-icon;
+                    /* border: 2px solid black; */
+                }
+                .fi1 {
+                    height: 100px;
+                }
+                .fi2{
+                    height: 100px;
+                }
+                .fi3{
+                    height: 100px;
+                }
+                .fi4{
+                    height: 100px;
+                }
+                .fi5{
+                    height: 95px;
+                }
+                .fi6{
+                    height: 70px;
+                }
+
+                .menu-text {
+                    color: white;
+                    font-size: 40px;
+                    font-weight: 500;
+                    font-family: nicotineregular;
+
+                    text-align: center;
+                }
+                .add-icon {
+
+                    width: 30px;
+                }
+            }
+            .menu-card:hover{
+                filter: brightness(0.7);
+            }
+        }
+    }
+
+    .inner-item:nth-child(2) {
+        grid-area: footer;
+        height: fit-content;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        background: linear-gradient(to right, rgb(193, 119, 222), rgb(235, 96, 96));
+    }
+}
